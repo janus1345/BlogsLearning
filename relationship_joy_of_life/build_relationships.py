@@ -70,3 +70,4 @@ if __name__ == '__main__':
 
     read_novels_role_count()
     write_file()
+
