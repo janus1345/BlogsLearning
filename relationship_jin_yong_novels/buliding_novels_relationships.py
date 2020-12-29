@@ -22,7 +22,7 @@ def read_novels_role_count(role_path, novels_path):
         poss = pseg.cut(line)
         line_names.append([])
         for w in poss:
-            if w.flag != "nr" or w.word in role_name_list:
+            if w.flag != "nr" or (w.word not in role_name_list) or len(w.word) < 2:
                 continue
             line_names[-1].append(w.word)
             if names.get(w.word) is None:
